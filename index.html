@@ -73,6 +73,35 @@
 
     <div class="portfolio-container" id="projetos-iniciais">
 
+      <div class="portfolio-box" onclick="mostrarProjeto('sofiaIA')">
+        <img src="src/APP5.png" alt="Projeto Sofia IA">
+        <div class="portfolio-layer">
+          <h3>Sofia IA</h3>
+          <h4>Java</h4>
+          <h4>Spring Boot</h4>
+          <h4>PostgreSQL</h4>
+        </div>
+      </div>
+
+      <div class="portfolio-box" onclick="mostrarProjeto('codeChella')">
+        <img src="src/APP6.png" alt="Projeto CodeChella API">
+        <div class="portfolio-layer">
+          <h3>CodeChella API</h3>
+          <h4>Java</h4>
+          <h4>Spring Boot</h4>
+        </div>
+      </div>
+
+      <div class="portfolio-box" onclick="mostrarProjeto('medflow')">
+        <img src="src/APP4.png" alt="Projeto MedFlow API">
+        <div class="portfolio-layer">
+          <h3>MedFlow API</h3>
+          <h4>Java</h4>
+          <h4>Spring Boot</h4>
+        </div>
+      </div>
+
+
       <div class="portfolio-box" id="beatTimer-card" onclick="mostrarProjeto('beatTimer')">
         <img src="src/APP3.png" alt="Projeto BeatTimer">
         <div class="portfolio-layer">
@@ -116,6 +145,81 @@
 
 
 
+
+    <div class="projeto-expandido" id="sofiaIA" style="display: none;">
+      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+      <div class="projeto-detalhes">
+        <img class="print-capa" src="src/APP5.png" alt="Capa Sofia IA">
+
+        <div class="prints-container">
+          <div class="prints-e-descricao">
+            <div class="descricao-caixa">
+              <h3>Descrição do Projeto</h3>
+              <ul>
+                <li>API completa de autenticação e integração com inteligência artificial</li>
+                <li>Spring Boot + JWT + PostgreSQL</li>
+                <li>Estrutura modular: Auth, Opinion, IA</li>
+                <li>Endereços REST bem definidos e documentados</li>
+                <li>Camadas bem organizadas (Controller, Service, Repository)</li>
+                <li>Suporte a requisições externas (API IA)</li>
+                <li>Projeto escalável e arquitetura limpa</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="github-link">
+            Confira o projeto completo no meu
+            <a href="https://github.com/Pedro1santiago/Sofia" target="_blank">GITHUB</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="projeto-expandido" id="codeChella" style="display: none;">
+      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+
+      <div class="projeto-detalhes">
+        <img class="print-capa" src="src/APP6.png" alt="Capa CodeChella">
+
+        <div class="descricao-caixa">
+          <h3>Descrição do Projeto</h3>
+          <ul>
+            <li>API REST para gerenciamento de eventos e ingressos</li>
+            <li>Estrutura modular com serviços e repositórios</li>
+            <li>Autenticação e controle de acesso em desenvolvimento</li>
+            <li>Modelagem inicial sólida com foco em escalabilidade</li>
+          </ul>
+        </div>
+
+        <p class="github-link">
+          Confira no GITHUB:
+          <a href="https://github.com/Pedro1santiago/CodeChella_API_PROJECT" target="_blank">Link</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="projeto-expandido" id="medflow" style="display: none;">
+      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+
+      <div class="projeto-detalhes">
+        <img class="print-capa" src="src/APP4.png" alt="Capa MedFlow">
+
+        <div class="descricao-caixa">
+          <h3>Descrição do Projeto</h3>
+          <ul>
+            <li>API para clínicas médicas com cadastro e controle de consultas</li>
+            <li>Implementado em Java + Spring Boot</li>
+            <li>Estrutura REST profissional: controllers, services, repositories</li>
+            <li>Banco relacional modelado para agendamentos</li>
+          </ul>
+        </div>
+
+        <p class="github-link">
+          Confira no GITHUB:
+          <a href="https://github.com/Pedro1santiago/MedFlow_API" target="_blank">Link</a>
+        </p>
+      </div>
+    </div>
 
 
     <!-- Projeto Expandido WhatsApp -->
@@ -242,11 +346,12 @@
     <div class="cards">
 
       <div class="card">
-        <h3>BeatTimer</h3>
-        <p>Aplicativo musical com cronômetro, pomodoro e alarmes, integrando Spotify via API. Desenvolvido em Java com
-          interface moderna e responsiva.</p>
-        <a href="https://github.com/Pedro1santiago/BeatTimer-Project" target="_blank">Ver projeto</a>
+        <h3>Sofia IA</h3>
+        <p>API completa em Java com Spring Boot, integrando IA, autenticação JWT, módulos separados para
+          escalabilidade e dados salvos no Postegres.</p>
+        <a href="https://github.com/Pedro1santiago/Sofia" target="_blank">Ver projeto</a>
       </div>
+
 
       <div class="card">
         <h3>CodeChella - Software</h3>
@@ -254,7 +359,7 @@
           endpoints e
           modelos definidos.</p>
         <a href="https://github.com/Pedro1santiago/CodeChella_API_PROJECT" target="_blank">Ver projeto
-          DESENVOLVIMENTO</a>
+          </a>
       </div>
 
       <div class="card">
@@ -270,6 +375,13 @@
         </p>
         <a href="https://github.com/Pedro1santiago/Movie_Ranking_API_PROJECT" target="_blank">Ver projeto
           DESENVOLVIMENTO</a>
+      </div>
+
+      <div class="card">
+        <h3>BeatTimer</h3>
+        <p>Aplicativo musical com cronômetro, pomodoro e alarmes, integrando Spotify via API. Desenvolvido em Java com
+          interface moderna e responsiva.</p>
+        <a href="https://github.com/Pedro1santiago/BeatTimer-Project" target="_blank">Ver projeto</a>
       </div>
 
       <div class="card">

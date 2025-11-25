@@ -1,7 +1,8 @@
 // ================= CARROSSEL ==================
 
 // Todos os projetos que podem ser abertos ao clicar na capa
-const projetosExpandido = ['beatTimer', 'whatsapp', 'expenses', 'chatTech'];
+const projetosExpandido = ['sofiaIA', 'codeChella', 'medflow', 'beatTimer', 'whatsapp', 'expenses', 'chatTech'];
+
 
 let indexAtual = 0; // índice do carrossel
 const capasVisiveis = 3; // quantas capas aparecem de cada vez
@@ -40,62 +41,41 @@ function voltarProjetos() {
     indexAtual = Math.max(total - capasVisiveis, 0);
   }
 
-  ultimaSeta = 'direita'; // seta direita visível inicialmente
+  ultimaSeta = 'direita'; // seta direita visível inicialmenteB
   atualizarCarrossel();
 }
 
-// Atualiza as capas visíveis no carrossel e visibilidade das setas
+const ultimoIndex = 4; // 7 capas - 3 visíveis = 4
+
 function atualizarCarrossel() {
   const container = document.getElementById('projetos-iniciais');
   const cards = Array.from(container.children);
-  const total = cards.length;
 
-  // mostra apenas as capas do índice atual
   cards.forEach((card, i) => {
-    card.style.display = (i >= indexAtual && i < indexAtual + capasVisiveis) ? 'block' : 'none';
+    card.style.display = (i >= indexAtual && i < indexAtual + capasVisiveis)
+      ? 'block'
+      : 'none';
   });
 
   const setaEsquerda = document.getElementById("seta-esquerda");
   const setaDireita = document.getElementById("seta-direita");
 
-  // lógica ping-pong: apenas uma seta visível por vez
-  if (indexAtual === 0) {
-    setaEsquerda.style.display = "none";
-    setaDireita.style.display = "block";
-    ultimaSeta = 'direita';
-  } else if (indexAtual >= total - capasVisiveis) {
-    setaEsquerda.style.display = "block";
-    setaDireita.style.display = "none";
-    ultimaSeta = 'esquerda';
-  } else {
-    // alterna conforme última seta usada
-    if (ultimaSeta === 'direita') {
-      setaEsquerda.style.display = "block";
-      setaDireita.style.display = "none";
-    } else {
-      setaEsquerda.style.display = "none";
-      setaDireita.style.display = "block";
-    }
-  }
+  setaEsquerda.style.display = indexAtual === 0 ? "none" : "block";
+  setaDireita.style.display = indexAtual === ultimoIndex ? "none" : "block";
 }
 
-// Avança o carrossel →
+// Avançar →
 document.getElementById("seta-direita").addEventListener("click", () => {
-  const container = document.getElementById('projetos-iniciais');
-  const total = container.children.length;
-
-  if (indexAtual < total - capasVisiveis) {
+  if (indexAtual < ultimoIndex) {
     indexAtual++;
-    ultimaSeta = 'direita';
     atualizarCarrossel();
   }
 });
 
-// Volta o carrossel ←
+// Voltar ←
 document.getElementById("seta-esquerda").addEventListener("click", () => {
   if (indexAtual > 0) {
     indexAtual--;
-    ultimaSeta = 'esquerda';
     atualizarCarrossel();
   }
 });
@@ -112,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   if (!form) return; // caso a página não tenha o form
-  
+
   const button = form.querySelector(".btn");
 
   form.addEventListener("submit", async (e) => {
