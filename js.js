@@ -1,7 +1,7 @@
 // ================= CARROSSEL ==================
 
 // Todos os projetos que podem ser abertos ao clicar na capa
-const projetosExpandido = ['sofiaIA', 'codeChella', 'medflow', 'beatTimer', 'whatsapp', 'expenses', 'chatTech'];
+const projetosExpandido = ['sofiaIA', 'codeChella', 'medflow', 'beatTimer'];
 
 
 let indexAtual = 0; // índice do carrossel
@@ -41,11 +41,11 @@ function voltarProjetos() {
     indexAtual = Math.max(total - capasVisiveis, 0);
   }
 
-  ultimaSeta = 'direita'; // seta direita visível inicialmenteB
+  ultimaSeta = 'direita'; // seta direita visível inicialmente
   atualizarCarrossel();
 }
 
-const ultimoIndex = 4; // 7 capas - 3 visíveis = 4
+const ultimoIndex = 1; // 4 capas - 3 visíveis = 1
 
 function atualizarCarrossel() {
   const container = document.getElementById('projetos-iniciais');
@@ -87,6 +87,37 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarCarrossel();
 });
 
+
+// ================= TOGGLE TEMA ==================
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("theme-toggle");
+  const html = document.documentElement;
+  
+  // Carregar tema salvo
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  if (savedTheme === "light") {
+    html.setAttribute("data-theme", "light");
+    themeToggle.classList.remove("bx-moon");
+    themeToggle.classList.add("bx-sun");
+  }
+  
+  // Toggle entre temas
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = html.getAttribute("data-theme");
+    
+    if (currentTheme === "light") {
+      html.removeAttribute("data-theme");
+      themeToggle.classList.remove("bx-sun");
+      themeToggle.classList.add("bx-moon");
+      localStorage.setItem("theme", "dark");
+    } else {
+      html.setAttribute("data-theme", "light");
+      themeToggle.classList.remove("bx-moon");
+      themeToggle.classList.add("bx-sun");
+      localStorage.setItem("theme", "light");
+    }
+  });
+});
 
 // ================= FORMULÁRIO ==================
 document.addEventListener("DOMContentLoaded", () => {

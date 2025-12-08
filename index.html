@@ -22,6 +22,7 @@
       <a href="#conhecimentos">Conhecimentos</a>
       <a href="#contact">Contato</a>
     </nav>
+    <i class='bx bx-moon' id="theme-toggle"></i>
   </header>
 
   <!-- Home Section -->
@@ -54,12 +55,7 @@
     <div class="about-content">
       <h2 class="heading">Sobre <span>Mim</span></h2>
       <h3>Desenvolvedor Back-end</h3>
-      <p>Sou Pedro Santiago, desenvolvedor back-end com foco em Java e Python. Atuo na Solution4Fleet, empresa do grupo
-        Santander, onde iniciei na operação e, com dedicação, conquistei meu espaço na área de TI. Atualmente, contribuo
-        com o time de desenvolvimento na criação de funcionalidades para o sistema da empresa, incluindo o
-        desenvolvimento de APIs para automatizar processos e integrações que otimizam a rotina de negócio. Tenho
-        experiência prática com APIs e manipulação de dados, e sigo em constante aprimoramento técnico para entregar
-        soluções robustas e escaláveis.</p>
+      <p>Sou Pedro Santiago, desenvolvedor back-end com foco em Java e Python. Tenho experiência informal em desenvolvimento de TI, onde aprendi na prática e conquistei conhecimento sólido em criação de sistemas completos. Atualmente trabalho na Solution4Fleet, empresa do grupo Santander, onde já desenvolvi APIs utilizando Spring Boot para o time comercial, consumindo dados de CRM e integrando diretamente com Power BI para análises e relatórios automatizados. Possuo habilidade para desenvolver APIs e back-ends completos utilizando Spring Boot, Spring Security, JWT, integração com bancos de dados relacionais (MySQL, PostgreSQL) e deploy em plataformas como Render. Sigo em constante aprimoramento técnico para entregar soluções robustas, seguras e escaláveis.</p>
       <a href="https://www.linkedin.com/in/pedro-santiago-838300277" class="btn" target="_blank"
         rel="noopener noreferrer">Saiba Mais</a>
 
@@ -73,31 +69,74 @@
 
     <div class="portfolio-container" id="projetos-iniciais">
 
-      <div class="portfolio-box" onclick="mostrarProjeto('sofiaIA')">
-        <img src="src/APP5.png" alt="Projeto Sofia IA">
+      <div class="portfolio-box portfolio-box-hover" onclick="mostrarProjeto('sofiaIA')">
+        <img src="src/sofiaIaCapa.png" alt="Projeto Sofia IA">
         <div class="portfolio-layer">
-          <h3>Sofia IA</h3>
-          <h4>Java</h4>
-          <h4>Spring Boot</h4>
-          <h4>PostgreSQL</h4>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="tech-icon">
+            <span class="tech-name-tooltip">Java</span>
+          </div>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="tech-icon">
+            <span class="tech-name-tooltip">Spring Boot</span>
+          </div>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-icon">
+            <span class="tech-name-tooltip">PostgreSQL</span>
+          </div>
+          <div class="click-indicator-wrapper">
+            <div class="click-indicator">+</div>
+            <span class="tech-name-tooltip">Click me</span>
+          </div>
         </div>
       </div>
 
-      <div class="portfolio-box" onclick="mostrarProjeto('codeChella')">
-        <img src="src/APP6.png" alt="Projeto CodeChella API">
+      <div class="portfolio-box portfolio-box-hover" onclick="mostrarProjeto('codeChella')">
+        <div class="estrela-destaque">⭐</div>
+        <img src="src/PaginaInicial.png" alt="Projeto CodeChella API">
         <div class="portfolio-layer">
-          <h3>CodeChella API</h3>
-          <h4>Java</h4>
-          <h4>Spring Boot</h4>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="tech-icon">
+            <span class="tech-name-tooltip">Java</span>
+          </div>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="tech-icon">
+            <span class="tech-name-tooltip">Spring Boot</span>
+          </div>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="tech-icon">
+            <span class="tech-name-tooltip">TypeScript</span>
+          </div>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-icon">
+            <span class="tech-name-tooltip">React</span>
+          </div>
+          <div class="click-indicator-wrapper">
+            <div class="click-indicator">+</div>
+            <span class="tech-name-tooltip">Click me</span>
+          </div>
         </div>
       </div>
 
       <div class="portfolio-box" onclick="mostrarProjeto('medflow')">
         <img src="src/APP4.png" alt="Projeto MedFlow API">
         <div class="portfolio-layer">
-          <h3>MedFlow API</h3>
-          <h4>Java</h4>
-          <h4>Spring Boot</h4>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="tech-icon">
+            <span class="tech-name-tooltip">Java</span>
+          </div>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="tech-icon">
+            <span class="tech-name-tooltip">Spring Boot</span>
+          </div>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon">
+            <span class="tech-name-tooltip">MySQL</span>
+          </div>
+          <div class="click-indicator-wrapper">
+            <div class="click-indicator">+</div>
+            <span class="tech-name-tooltip">Click me</span>
+          </div>
         </div>
       </div>
 
@@ -105,36 +144,14 @@
       <div class="portfolio-box" id="beatTimer-card" onclick="mostrarProjeto('beatTimer')">
         <img src="src/APP3.png" alt="Projeto BeatTimer">
         <div class="portfolio-layer">
-          <h3>BeatTimer</h3>
-          <h4>Java</h4>
-          <h4>API Spotify</h4>
-        </div>
-      </div>
-
-      <div class="portfolio-box" onclick="mostrarProjeto('whatsapp')">
-        <img src="src/APP1.png" alt="Projeto WhatsApp">
-        <div class="portfolio-layer">
-          <h3>Projeto WhatsApp</h3>
-          <h4>Kotlin</h4>
-          <h4>Firebase</h4>
-        </div>
-      </div>
-
-      <div class="portfolio-box" onclick="mostrarProjeto('chatTech')">
-        <img src="src/capaChatTech.png" alt="Projeto ChatTech">
-        <div class="portfolio-layer">
-          <h3>Projeto WhatsApp</h3>
-          <h4>JavaScript</h4>
-          <h4>Web Sockets</h4>
-        </div>
-      </div>
-
-
-      <div class="portfolio-box" id="expenses-card" onclick="mostrarProjeto('expenses')" style="display: none;">
-        <img src="src/APP2.png" alt="Projeto Expenses">
-        <div class="portfolio-layer">
-          <h3>Projeto Expenses</h3>
-          <h4>Flutter</h4>
+          <div class="tech-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="tech-icon">
+            <span class="tech-name-tooltip">Java</span>
+          </div>
+          <div class="click-indicator-wrapper">
+            <div class="click-indicator">+</div>
+            <span class="tech-name-tooltip">Click me</span>
+          </div>
         </div>
       </div>
 
@@ -148,25 +165,24 @@
 
     <div class="projeto-expandido" id="sofiaIA" style="display: none;">
       <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
-      <div class="projeto-detalhes">
+      <div class="projeto-detalhes projeto-com-capa">
         <img class="print-capa" src="src/APP5.png" alt="Capa Sofia IA">
 
         <div class="prints-container">
-          <div class="prints-e-descricao">
-            <div class="descricao-caixa">
+          <div class="descricao-caixa-expandida-lateral">
               <h3>Descrição do Projeto</h3>
               <ul>
-                <li>API completa de autenticação e integração com inteligência artificial</li>
-                <li>Spring Boot + JWT + PostgreSQL</li>
-                <li>Estrutura modular: Auth, Opinion, IA</li>
-                <li>Endereços REST bem definidos e documentados</li>
-                <li>Camadas bem organizadas (Controller, Service, Repository)</li>
-                <li>Suporte a requisições externas (API IA)</li>
-                <li>Projeto escalável e arquitetura limpa</li>
+                <li><strong>Plataforma de assistente virtual com IA integrada</strong></li>
+                <li>Backend desenvolvido em Java + Spring Boot + Spring Security</li>
+                <li>Integração com API de Inteligência Artificial (OpenAI/ChatGPT)</li>
+                <li>Autenticação e autorização com JWT</li>
+                <li>Banco de dados PostgreSQL com relacionamentos complexos</li>
+                <li>Módulos escaláveis: Auth, Opinion, IA, User</li>
+              <li>API RESTful com endpoints documentados</li>
+              <li>Arquitetura em camadas (MVC) e boas práticas</li>
               </ul>
-            </div>
           </div>
-
+          
           <p class="github-link">
             Confira o projeto completo no meu
             <a href="https://github.com/Pedro1santiago/Sofia" target="_blank">GITHUB</a>.
@@ -179,21 +195,14 @@
       <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
 
       <div class="projeto-detalhes">
-        <img class="print-capa" src="src/APP6.png" alt="Capa CodeChella">
-
-        <div class="descricao-caixa">
-          <h3>Descrição do Projeto</h3>
-          <ul>
-            <li>API REST para gerenciamento de eventos e ingressos</li>
-            <li>Estrutura modular com serviços e repositórios</li>
-            <li>Autenticação e controle de acesso em desenvolvimento</li>
-            <li>Modelagem inicial sólida com foco em escalabilidade</li>
-          </ul>
+        <div class="prints-lado-a-lado">
+          <img class="print-duplo" src="src/PaginaInicial.png" alt="CodeChella Página Inicial">
+          <img class="print-duplo" src="src/painelDeEventos.png" alt="CodeChella Painel de Eventos">
         </div>
 
-        <p class="github-link">
-          Confira no GITHUB:
-          <a href="https://github.com/Pedro1santiago/CodeChella_API_PROJECT" target="_blank">Link</a>
+        <p class="github-link" style="text-align: center;">
+          Confira o projeto completo no meu
+          <a href="https://github.com/Pedro1santiago/CodeChella_Software" target="_blank">GITHUB</a>.
         </p>
       </div>
     </div>
@@ -201,23 +210,30 @@
     <div class="projeto-expandido" id="medflow" style="display: none;">
       <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
 
-      <div class="projeto-detalhes">
+      <div class="projeto-detalhes projeto-com-capa">
         <img class="print-capa" src="src/APP4.png" alt="Capa MedFlow">
 
-        <div class="descricao-caixa">
-          <h3>Descrição do Projeto</h3>
-          <ul>
-            <li>API para clínicas médicas com cadastro e controle de consultas</li>
-            <li>Implementado em Java + Spring Boot</li>
-            <li>Estrutura REST profissional: controllers, services, repositories</li>
-            <li>Banco relacional modelado para agendamentos</li>
-          </ul>
-        </div>
+        <div class="prints-container">
+          <div class="descricao-caixa-expandida-lateral">
+            <h3>Descrição do Projeto</h3>
+            <ul>
+              <li><strong>Sistema de gerenciamento de clínicas médicas</strong></li>
+              <li>API RESTful com Java + Spring Boot + Spring Data JPA</li>
+              <li>Cadastro de médicos, pacientes e especialidades</li>
+              <li>Sistema de agendamento de consultas com validações</li>
+              <li>Autenticação com Spring Security e JWT</li>
+              <li>Banco de dados MySQL com migrations Flyway</li>
+              <li>Documentação da API com Swagger</li>
+              <li>Arquitetura em camadas (Controllers, Services, Repositories)</li>
+              <li><strong>🌐 Hospedado no Render</strong></li>
+            </ul>
+          </div>
 
-        <p class="github-link">
-          Confira no GITHUB:
-          <a href="https://github.com/Pedro1santiago/MedFlow_API" target="_blank">Link</a>
-        </p>
+          <p class="github-link">
+            Confira o projeto completo no meu
+            <a href="https://github.com/Pedro1santiago/MedFlow_API" target="_blank">GITHUB</a>.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -237,12 +253,12 @@
             <div class="descricao-caixa">
               <h3>Descrição do Projeto</h3>
               <ul>
-                <li>Conecta com Spotify via API</li>
-                <li>Cronômetro, Pomodoro e Relógio</li>
-                <li>Sistema de cores e alarmes</li>
-                <li>Desenvolvido em Java e Spring</li>
-                <li>Interface moderna e responsiva</li>
-                <li>Funcionalidades para estudo musical</li>
+                <li>Clone funcional do WhatsApp</li>
+                <li>Sistema de login e autenticação</li>
+                <li>Envio e recebimento de mensagens em tempo real</li>
+                <li>Desenvolvido em Kotlin</li>
+                <li>Integração completa com Firebase</li>
+                <li>Interface fiel ao app original</li>
               </ul>
             </div>
           </div>
@@ -298,11 +314,12 @@
             <div class="descricao-caixa">
               <h3>Descrição do Projeto</h3>
               <ul>
-                <li>Relógio e cronômetro musical</li>
-                <li>BeatTimer para prática de música</li>
-                <li>Alarmes e cores personalizáveis</li>
+                <li>Conecta com Spotify via API oficial</li>
+                <li>Cronômetro, Pomodoro e Relógio integrados</li>
+                <li>Sistema de cores e alarmes personalizáveis</li>
                 <li>Desenvolvido em Java</li>
                 <li>Interface moderna e responsiva</li>
+                <li>Funcionalidades para estudo musical</li>
               </ul>
             </div>
           </div>
@@ -370,14 +387,6 @@
       </div>
 
       <div class="card">
-        <h3>Movie Ranking API</h3>
-        <p>API em desenvolvimento para ranking de filmes, armazenamento de avaliações e recomendações personalizadas.
-        </p>
-        <a href="https://github.com/Pedro1santiago/Movie_Ranking_API_PROJECT" target="_blank">Ver projeto
-          DESENVOLVIMENTO</a>
-      </div>
-
-      <div class="card">
         <h3>BeatTimer</h3>
         <p>Aplicativo musical com cronômetro, pomodoro e alarmes, integrando Spotify via API. Desenvolvido em Java com
           interface moderna e responsiva.</p>
@@ -414,6 +423,10 @@
       <div class="tech">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
         <span class="tech-name">MySQL</span>
+      </div>
+      <div class="tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+        <span class="tech-name">PostgreSQL</span>
       </div>
       <div class="tech">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
