@@ -84,17 +84,17 @@ const ProjectsSection = () => {
         </div>
 
         {/* Progress Bar */}
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <span className="text-sm font-medium text-primary">
+        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8">
+          <span className="text-xs sm:text-sm font-medium text-primary">
             {String(currentIndex + 1).padStart(2, "0")}
           </span>
-          <div className="w-64 h-1 bg-secondary rounded-full overflow-hidden">
+          <div className="w-32 sm:w-48 md:w-64 h-1 bg-secondary rounded-full overflow-hidden">
             <div 
               className="h-full bg-primary transition-all duration-500 ease-out"
               style={{ width: `${((currentIndex + 1) / totalProjects) * 100}%` }}
             />
           </div>
-          <span className="text-sm text-muted-foreground">
+          <span className="text-xs sm:text-sm text-muted-foreground">
             {String(totalProjects).padStart(2, "0")}
           </span>
         </div>
@@ -104,21 +104,21 @@ const ProjectsSection = () => {
           {/* Navigation Buttons */}
           <button
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all duration-300 -translate-x-4 lg:-translate-x-8"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full glass flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all duration-300 -translate-x-2 sm:-translate-x-4 lg:-translate-x-8"
             aria-label="Projeto anterior"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all duration-300 translate-x-4 lg:translate-x-8"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full glass flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all duration-300 translate-x-2 sm:translate-x-4 lg:translate-x-8"
             aria-label="Próximo projeto"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Carousel Track */}
-          <div className="overflow-hidden mx-8 lg:mx-16">
+          <div className="overflow-hidden mx-4 sm:mx-8 lg:mx-16">
             <div 
               className="flex transition-transform duration-700 ease-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -126,11 +126,11 @@ const ProjectsSection = () => {
               {featuredProjects.map((project, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-4"
+                  className="w-full flex-shrink-0 px-2 sm:px-4"
                 >
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                     {/* Project Image */}
-                    <div className="relative group">
+                    <div className="relative group order-1">
                       <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                         <img
                           src={project.image}
@@ -148,17 +148,17 @@ const ProjectsSection = () => {
                     </div>
 
                     {/* Project Info */}
-                    <div className="space-y-6">
+                    <div className="space-y-4 md:space-y-6 order-2">
                       <div>
-                        <span className="text-6xl font-bold text-primary/20">
+                        <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary/20">
                           {String(index + 1).padStart(2, "0")}
                         </span>
-                        <h3 className="text-3xl font-bold -mt-4">
+                        <h3 className="text-2xl sm:text-3xl font-bold -mt-2 md:-mt-4">
                           {project.title}
                         </h3>
                       </div>
                       
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                         {project.description}
                       </p>
 
@@ -167,7 +167,7 @@ const ProjectsSection = () => {
                         {project.technologies.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-3 py-1 text-sm rounded-full border border-primary/30 text-primary bg-primary/5 hover:bg-primary/10 transition-colors"
+                            className="px-2.5 py-1 text-xs sm:text-sm rounded-full border border-primary/30 text-primary bg-primary/5 hover:bg-primary/10 transition-colors"
                           >
                             {tech}
                           </span>
@@ -175,14 +175,14 @@ const ProjectsSection = () => {
                       </div>
 
                       {/* Links */}
-                      <div className="flex items-center gap-4 pt-4">
+                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 md:pt-4">
                         <a
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="btn-outline flex items-center gap-2"
+                          className="btn-outline flex items-center justify-center gap-2 text-sm sm:text-base"
                         >
-                          <Github className="w-5 h-5" />
+                          <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                           Código
                         </a>
                         {project.demo && (
@@ -190,9 +190,9 @@ const ProjectsSection = () => {
                             href={project.demo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn-primary flex items-center gap-2"
+                            className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base"
                           >
-                            <ExternalLink className="w-5 h-5" />
+                            <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                             Ver Aplicação
                           </a>
                         )}
