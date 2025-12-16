@@ -139,7 +139,7 @@ const HeroSection = () => {
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="/curriculo.pdf"
+              href="/Currículo.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary flex items-center gap-2"
