@@ -11,26 +11,27 @@ const ProjectsSection = () => {
       title: "CodeChella",
       description:
         "Plataforma completa de gerenciamento de eventos e ingressos com arquitetura multi-nível. Sistema hierárquico com 3 níveis de usuários (Super Admin, Admin, Usuário) com isolamento de dados entre administradores. Backend reativo com Spring WebFlux, R2DBC e Server-Sent Events para updates em tempo real. Frontend em React + TypeScript com fluxo completo de aprovação de permissões.",
-      image: "https://pedro1santiago.github.io/Portifolio/src/PaginaInicial.png",
+      image: "/images/PaginaInicial (1).png",
       technologies: ["Java 17", "Spring Boot 3", "Spring Security", "WebFlux", "PostgreSQL", "React", "TypeScript"],
       github: "https://github.com/Pedro1santiago/CodeChella_Software",
-      demo: "https://lnkd.in/d3jyQ9Wj",
+      demo: "https://codechella-five-sigma.vercel.app/",
       featured: true,
     },
     {
       title: "Sofia IA",
       description:
         "Plataforma de assistente virtual com IA integrada. Backend em Java + Spring Boot + Spring Security com autenticação JWT e integração com OpenAI.",
-      image: "https://pedro1santiago.github.io/Portifolio/src/sofiaIaCapa.png",
+      image: "/images/sofiaIaCapa (1).png",
       technologies: ["Java", "Spring Boot", "PostgreSQL", "JWT", "OpenAI"],
       github: "https://github.com/Pedro1santiago/Sofia",
+      demo: "https://sof-ia-self.vercel.app",
       featured: false,
     },
     {
       title: "MedFlow API",
       description:
         "Sistema de gerenciamento de clínicas médicas com cadastro de médicos, pacientes, agendamentos e autenticação completa.",
-      image: "https://pedro1santiago.github.io/Portifolio/src/APP4.png",
+      image: "/images/APP4 (1).png",
       technologies: ["Java", "Spring Boot", "MySQL", "Swagger", "JWT"],
       github: "https://github.com/Pedro1santiago/MedFlow_API",
     },
@@ -38,7 +39,7 @@ const ProjectsSection = () => {
       title: "BeatTimer",
       description:
         "Aplicativo musical com cronômetro, pomodoro e alarmes, integrando Spotify via API oficial. Interface moderna e responsiva.",
-      image: "https://pedro1santiago.github.io/Portifolio/src/APP3.png",
+      image: "/images/APP3.png",
       technologies: ["Java", "Spotify API"],
       github: "https://github.com/Pedro1santiago/BeatTimer-Project",
     },
@@ -184,15 +185,17 @@ const ProjectsSection = () => {
                           <Github className="w-5 h-5" />
                           Código
                         </a>
-                        <a
-                          href={project.demo || project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-primary flex items-center gap-2"
-                        >
-                          <ExternalLink className="w-5 h-5" />
-                          Demo
-                        </a>
+                        {project.demo && (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-primary flex items-center gap-2"
+                          >
+                            <ExternalLink className="w-5 h-5" />
+                            Ver Aplicação
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
