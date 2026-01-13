@@ -29,16 +29,16 @@ const AboutSection = () => {
   ];
 
   const skills = [
-    { name: "Java", level: "Avançado" },
-    { name: "Spring Boot", level: "Avançado" },
-    { name: "PostgreSQL", level: "Intermediário" },
-    { name: "MySQL", level: "Intermediário" },
-    { name: "Python", level: "Intermediário" },
-    { name: "REST APIs", level: "Avançado" },
-    { name: "Spring Security", level: "Intermediário" },
-    { name: "JWT", level: "Intermediário" },
-    { name: "Git & GitHub", level: "Avançado" },
-    { name: "Kotlin", level: "Básico" },
+    { name: "Java" },
+    { name: "Spring Boot" },
+    { name: "PostgreSQL" },
+    { name: "MySQL" },
+    { name: "Python" },
+    { name: "REST APIs" },
+    { name: "Spring Security" },
+    { name: "JWT" },
+    { name: "Git & GitHub" },
+    { name: "Kotlin" },
   ];
 
   return (
@@ -49,7 +49,7 @@ const AboutSection = () => {
           <div>
             <h2 className="section-title">Sobre Mim</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Sou um desenvolvedor back-end com foco em <span className="text-foreground font-medium">Java e Python</span>. 
+              Sou um desenvolvedor back-end com foco em <span className="text-foreground font-medium">Java</span>. 
               Tenho experiência prática em desenvolvimento de TI, onde aprendi construindo sistemas completos 
               e conquistei conhecimento sólido na criação de soluções robustas.
             </p>
@@ -93,7 +93,6 @@ const AboutSection = () => {
                 <p className="font-medium group-hover:text-primary transition-colors">
                   {skill.name}
                 </p>
-                <p className="text-sm text-muted-foreground">{skill.level}</p>
               </div>
             ))}
           </div>

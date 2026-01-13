@@ -129,7 +129,7 @@ const HeroSection = () => {
           {/* Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
             Desenvolvedor <span className="font-semibold text-foreground">Back-end</span> apaixonado por criar
-            soluções robustas e escaláveis com Java, Python e tecnologias modernas.
+            soluções robustas e escaláveis com Java e tecnologias modernas.
           </p>
 
           {/* CTA Buttons */}
