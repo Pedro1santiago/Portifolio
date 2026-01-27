@@ -54,8 +54,6 @@ const ContactSection = () => {
         throw new Error("Erro ao enviar");
       }
     } catch (error) {
-      console.error("Erro ao enviar:", error);
-      
       // Fallback: abrir cliente de email
       const mailtoLink = `mailto:pedro.santigosiqueira@gmail.com?subject=${encodeURIComponent(
         formData.subject || "Contato do Portfólio"
