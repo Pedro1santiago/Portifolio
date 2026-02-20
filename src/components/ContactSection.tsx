@@ -11,26 +11,73 @@ const ContactSection = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Submit to FormSubmit
-    const form = e.target as HTMLFormElement;
-    form.submit();
-    
-    toast({
-      title: "Mensagem enviada!",
-      description: "Obrigado pelo contato. Responderei em breve!",
-    });
+    setIsSubmitting(true);
+
+    try {
+      // Usando Web3Forms - gratuito e sem configuração
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "70911ce7-915c-42da-8a10-37cdeed61f18",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject || "Contato via Portfólio",
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Obrigado pelo contato. Responderei em breve!",
+        });
+
+        // Limpar formulário
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Erro ao enviar");
+      }
+    } catch (error) {
+      // Fallback: abrir cliente de email
+      const mailtoLink = `mailto:pedro.santigosiqueira@gmail.com?subject=${encodeURIComponent(
+        formData.subject || "Contato do Portfólio"
+      )}&body=${encodeURIComponent(
+        `Nome: ${formData.name}\nEmail: ${formData.email}\nTelefone: ${formData.phone}\n\nMensagem:\n${formData.message}`
+      )}`;
+      
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Abrindo cliente de email",
+        description: "O formulário será enviado através do seu cliente de email padrão.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
-      value: "pedrosantiago@email.com",
-      href: "mailto:pedrosantiago@email.com",
+      value: "pedro.santigosiqueira@gmail.com",
+      href: "mailto:pedro.santigosiqueira@gmail.com",
     },
     {
       icon: Linkedin,
@@ -68,14 +115,9 @@ const ContactSection = () => {
           <div className="glass rounded-2xl p-8">
             <h3 className="text-xl font-bold mb-6">Enviar Mensagem</h3>
             <form 
-              action="https://formsubmit.co/pedrosantiago@email.com" 
-              method="POST"
               onSubmit={handleSubmit} 
               className="space-y-6"
             >
-              {/* Hidden FormSubmit config */}
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value={window.location.href} />
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -152,9 +194,13 @@ const ContactSection = () => {
                   placeholder="Sua mensagem..."
                 />
               </div>
-              <button type="submit" className="w-full btn-primary flex items-center justify-center gap-2">
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
                 <Send className="w-4 h-4" />
-                Enviar Mensagem
+                {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
               </button>
             </form>
           </div>
@@ -186,9 +232,8 @@ const ContactSection = () => {
 
             {/* Download CV */}
             <a
-              href="/curriculo.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/Currículo.pdf"
+              download="Pedro_Santiago_Curriculo.pdf"
               className="flex items-center gap-4 p-4 glass rounded-xl hover:border-primary/50 transition-all group"
             >
               <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">

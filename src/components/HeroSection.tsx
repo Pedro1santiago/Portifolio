@@ -140,8 +140,7 @@ const HeroSection = () => {
             </a>
             <a
               href="/Currículo.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              download="Pedro_Santiago_Curriculo.pdf"
               className="btn-secondary flex items-center gap-2"
             >
               <Download className="w-4 h-4" />
@@ -179,7 +178,7 @@ const HeroSection = () => {
               <MessageCircle className="w-7 h-7 group-hover:text-primary transition-colors" />
             </a>
             <a
-              href="mailto:pedrosantiago@email.com"
+              href="mailto:pedro.santigosiqueira@gmail.com"
               className="w-14 h-14 rounded-full glass flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-all duration-300 group"
             >
               <Mail className="w-7 h-7 group-hover:text-primary transition-colors" />

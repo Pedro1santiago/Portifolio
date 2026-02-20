@@ -12,7 +12,7 @@ const AboutSection = () => {
       icon: GraduationCap,
       label: "Educação",
       value: "Ciências da Computação",
-      subtitle: "Em andamento",
+      subtitle: "2024 - 2027 - Em andamento",
     },
     {
       icon: FolderGit2,
@@ -49,9 +49,9 @@ const AboutSection = () => {
           <div>
             <h2 className="section-title">Sobre Mim</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Sou um desenvolvedor back-end com foco em <span className="text-foreground font-medium">Java</span>. 
-              Tenho experiência prática em desenvolvimento de TI, onde aprendi construindo sistemas completos 
-              e conquistei conhecimento sólido na criação de soluções robustas.
+              Sou o <span className="text-foreground font-medium">Pedro</span>, tenho 19 anos e sou um desenvolvedor back-end com foco em <span className="text-foreground font-medium">Java</span>. 
+              Tenho experiência prática em desenvolvimento de software. Sigo aprendendo e construindo softwares enquanto me aprofundo no desenvolvimento back-end. 
+              Atualmente, possuo conhecimento sólido na criação de soluções e estou em busca de uma oportunidade para aprender e entregar bons resultados.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Trabalhei na <span className="text-foreground font-medium">Solution4Fleet</span>, empresa do grupo Santander, 
@@ -65,8 +65,8 @@ const AboutSection = () => {
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Possuo habilidade para desenvolver APIs e back-ends completos utilizando Spring Boot, 
-              Spring Security, JWT, integração com bancos de dados relacionais (MySQL, PostgreSQL) 
-              e deploy em plataformas como Render.
+              Spring Security, JWT, integração com bancos de dados relacionais (MySQL e PostgreSQL) 
+              e deploy em plataformas como Render e Hostinger.
             </p>
           </div>
 

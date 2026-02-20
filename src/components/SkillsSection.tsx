@@ -5,7 +5,6 @@ const SkillsSection = () => {
       skills: [
         { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
         { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
-        { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         { name: "Kotlin", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" },
       ],
     },
@@ -83,12 +82,15 @@ const SkillsSection = () => {
               "Spring Security",
               "Spring Data JPA",
               "Flyway",
-              "Swagger",
               "Render",
               "Power BI",
-              "Metodologias Ágeis",
-              "Clean Code",
-              "MVC",
+              "Trabalho em equipe",
+              "Resiliência",
+              "Comunicação",
+              "Proatividade",
+              "Aprendizado contínuo",
+              "Adaptabilidade",
+              "Organização",
             ].map((skill, index) => (
               <span
                 key={index}
