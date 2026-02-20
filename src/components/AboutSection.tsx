@@ -5,7 +5,7 @@ const AboutSection = () => {
     {
       icon: Briefcase,
       label: "Experiência",
-      value: "Solution4Fleet",
+      value: "Solution4Fleet (até Fev/2026)",
       subtitle: "Grupo Santander",
     },
     {
@@ -54,9 +54,14 @@ const AboutSection = () => {
               e conquistei conhecimento sólido na criação de soluções robustas.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Atualmente trabalho na <span className="text-foreground font-medium">Solution4Fleet</span>, empresa do grupo Santander, 
-              onde desenvolvi APIs utilizando Spring Boot para o time comercial, consumindo dados de CRM e 
-              integrando diretamente com Power BI para análises e relatórios automatizados.
+              Trabalhei na <span className="text-foreground font-medium">Solution4Fleet</span>, empresa do grupo Santander, 
+              até fevereiro de 2026. Lá desenvolvi APIs utilizando Spring Boot para o time comercial, consumindo dados de CRM e 
+              integrando com Power BI para análises e relatórios automatizados.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Comecei como freelancer em dezembro de 2025 e atualmente atuo com a marca <span className="text-foreground font-medium">Planum Labs</span>,
+              desenvolvendo sistemas para terceiros — já entreguei um sistema para uma loja de produtos físicos e estou
+              em desenvolvimento de uma solução para uma oficina.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Possuo habilidade para desenvolver APIs e back-ends completos utilizando Spring Boot, 

@@ -3,10 +3,26 @@ import { Briefcase, Calendar, CheckCircle } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
+      title: "Freelancer - Desenvolvimento de Sistemas",
+      company: "Planum Labs",
+      type: "Freelancer",
+      period: "Dezembro/2025 - Atual",
+      description:
+        "Marca freelancer focada em desenvolver sistemas para terceiros. Atuo como fornecedor de soluções sob demanda, entregando back-ends e interfaces para clientes.",
+      responsibilities: [
+        "Desenvolvimento de sistema para loja de produtos físicos (concluído)",
+        "Desenvolvimento em andamento de sistema para oficina (em progresso)",
+        "Levantamento de requisitos, arquitetura de solução e integração com bancos de dados",
+      ],
+      skills: ["APIs", "Integração de Sistemas", "Desenvolvimento sob Demanda"],
+      icon: Briefcase,
+      current: true,
+    },
+    {
       title: "Assistente Operacional / Assistente de TI",
       company: "Solution4fleet - Santander",
       type: "CLT",
-      period: "Outubro/2024 - Atual",
+      period: "Outubro/2024 - Fevereiro/2026",
       description: "Manipulação de dados em sistemas internos (Rental), garantindo a integridade das informações e o andamento dos processos.",
       responsibilities: [
         "Desenvolvimento de API interna em Java com Spring Boot para consumo e apresentação de dados no Power BI",
@@ -17,7 +33,7 @@ const ExperienceSection = () => {
       ],
       skills: ["Java", "Spring Boot", "Power BI", "MySQL", "APIs REST"],
       icon: Briefcase,
-      current: true,
+      current: false,
     },
     {
       title: "Jovem Aprendiz",
