@@ -10,11 +10,21 @@ const ExperienceSection = () => {
       description:
         "Marca freelancer focada em desenvolver sistemas para terceiros. Atuo como fornecedor de soluções sob demanda, entregando back-ends e interfaces para clientes.",
       responsibilities: [
-        "Desenvolvimento de sistema para loja de produtos físicos (concluído)",
+        "AliceGlowStore (produção): sistema de gestão para loja de maquiagem (auth JWT/roles, produtos/estoque, vendas, caixa e relatórios)",
+        "Banco PostgreSQL com versionamento via Flyway (migrations) e deploy no Render com Docker",
         "Desenvolvimento em andamento de sistema para oficina (em progresso)",
         "Levantamento de requisitos, arquitetura de solução e integração com bancos de dados",
       ],
-      skills: ["APIs", "Integração de Sistemas", "Desenvolvimento sob Demanda"],
+      skills: [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "JWT",
+        "PostgreSQL",
+        "Flyway",
+        "Docker",
+        "OpenAPI/Swagger",
+      ],
       icon: Briefcase,
       current: true,
     },

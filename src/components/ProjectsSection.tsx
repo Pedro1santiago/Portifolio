@@ -1,12 +1,29 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { ExternalLink, Github, Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProjectsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const featuredProjects = [
+    {
+      title: "AliceGlowStore",
+      description:
+        "Sistema real (em produção) para gestão de uma loja de maquiagem. Inclui autenticação/autorizações com JWT (roles), produtos e estoque, vendas com validação de disponibilidade e total automático, controle de caixa e relatórios. Backend em Java 17 + Spring Boot 3, PostgreSQL com Flyway, OpenAPI/Swagger, Docker e deploy no Render. Boas práticas com DTOs, Jakarta Validation, ProblemDetail e correlation-id por request.",
+      image: "/images/aliceglowstore-capa.png",
+      technologies: [
+        "Java 17",
+        "Spring Boot 3",
+        "Spring Security/JWT",
+        "PostgreSQL/Flyway",
+        "Docker",
+        "OpenAPI/Swagger",
+        "Render",
+        "JUnit/Mockito",
+      ],
+      github: "https://github.com/Pedro1santiago/AliceGlow-backend",
+      featured: true,
+    },
     {
       title: "CodeChella",
       description:
@@ -15,7 +32,7 @@ const ProjectsSection = () => {
       technologies: ["Java 17", "Spring Boot 3", "Spring Security", "WebFlux", "PostgreSQL", "React", "TypeScript"],
       github: "https://github.com/Pedro1santiago/CodeChella_Software",
       demo: "https://codechella-five-sigma.vercel.app/",
-      featured: true,
+      featured: false,
     },
     {
       title: "Sofia IA",
@@ -47,29 +64,16 @@ const ProjectsSection = () => {
 
   const totalProjects = featuredProjects.length;
 
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % totalProjects);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, totalProjects]);
-
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
-    setIsAutoPlaying(false);
   };
 
   const goToPrev = () => {
     setCurrentIndex((prev) => (prev - 1 + totalProjects) % totalProjects);
-    setIsAutoPlaying(false);
   };
 
   const goToNext = () => {
     setCurrentIndex((prev) => (prev + 1) % totalProjects);
-    setIsAutoPlaying(false);
   };
 
   return (
@@ -128,7 +132,7 @@ const ProjectsSection = () => {
                   key={index}
                   className="w-full flex-shrink-0 px-2 sm:px-4"
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
                     {/* Project Image */}
                     <div className="relative group order-1">
                       <div className="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -148,12 +152,12 @@ const ProjectsSection = () => {
                     </div>
 
                     {/* Project Info */}
-                    <div className="space-y-4 md:space-y-6 order-2">
+                    <div className="space-y-3 md:space-y-4 order-2">
                       <div>
-                        <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary/20">
+                        <span className="block text-3xl sm:text-4xl md:text-5xl font-bold text-primary/20 leading-none">
                           {String(index + 1).padStart(2, "0")}
                         </span>
-                        <h3 className="text-2xl sm:text-3xl font-bold -mt-2 md:-mt-4">
+                        <h3 className="mt-1 text-2xl sm:text-3xl font-bold leading-tight">
                           {project.title}
                         </h3>
                       </div>
@@ -175,12 +179,12 @@ const ProjectsSection = () => {
                       </div>
 
                       {/* Links */}
-                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 md:pt-4">
+                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1">
                         <a
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="btn-outline flex items-center justify-center gap-2 text-sm sm:text-base"
+                          className="btn-outline bg-foreground/5 flex items-center justify-center gap-2 text-sm sm:text-base"
                         >
                           <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                           Código
