@@ -1,6 +1,9 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
+/**
+ * Página 404 simples para rotas não encontradas.
+ */
 const NotFound = () => {
   const location = useLocation();
 

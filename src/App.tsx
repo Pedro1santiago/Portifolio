@@ -6,8 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+/** Instância do React Query usada em toda a aplicação. */
 const queryClient = new QueryClient();
 
+/**
+ * Root da aplicação: providers globais + rotas.
+ */
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>

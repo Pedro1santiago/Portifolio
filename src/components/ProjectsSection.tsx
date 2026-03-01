@@ -1,6 +1,9 @@
 import { useState, useRef } from "react";
 import { ExternalLink, Github, Star, ChevronLeft, ChevronRight } from "lucide-react";
 
+/**
+ * Seção de projetos com carrossel (navegação por botões e dots).
+ */
 const ProjectsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -64,14 +67,17 @@ const ProjectsSection = () => {
 
   const totalProjects = featuredProjects.length;
 
+  /** Vai para um slide específico do carrossel. */
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
+  /** Avança para o slide anterior (com loop). */
   const goToPrev = () => {
     setCurrentIndex((prev) => (prev - 1 + totalProjects) % totalProjects);
   };
 
+  /** Avança para o próximo slide (com loop). */
   const goToNext = () => {
     setCurrentIndex((prev) => (prev + 1) % totalProjects);
   };

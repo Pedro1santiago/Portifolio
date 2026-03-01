@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Mail, Linkedin, Github, Send, Download, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+/**
+ * Seção de contato com formulário (Web3Forms) e links diretos.
+ */
 const ContactSection = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -13,6 +16,7 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  /** Envia o formulário; em falha, abre um mailto como fallback. */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);

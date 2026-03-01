@@ -1,5 +1,8 @@
 import { Briefcase, Calendar, CheckCircle } from "lucide-react";
 
+/**
+ * Seção de experiência profissional com timeline.
+ */
 const ExperienceSection = () => {
   const experiences = [
     {

@@ -8,6 +8,9 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
+/**
+ * Página principal que compõe as seções e gerencia o modo escuro.
+ */
 const Index = () => {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -32,6 +35,7 @@ const Index = () => {
     localStorage.setItem("darkMode", String(darkMode));
   }, [darkMode]);
 
+  /** Alterna o tema e persiste a preferência no localStorage. */
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
   return (

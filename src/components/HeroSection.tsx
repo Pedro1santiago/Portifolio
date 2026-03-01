@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import { Github, Linkedin, Mail, Download, ArrowRight, ChevronDown, MessageCircle } from "lucide-react";
 
+/**
+ * Seção inicial (hero) com animação em canvas e principais CTAs/redes.
+ */
 const HeroSection = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -15,6 +18,7 @@ const HeroSection = () => {
     let mouseX = 0;
     let mouseY = 0;
 
+    /** Ajusta o canvas para cobrir toda a viewport. */
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -23,6 +27,7 @@ const HeroSection = () => {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
+    /** Atualiza a posição do cursor para interação com o grid. */
     const handleMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
@@ -33,6 +38,7 @@ const HeroSection = () => {
     const gridSize = 40;
     const maxDistance = 150;
 
+    /** Renderiza o grid e agenda o próximo frame. */
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       

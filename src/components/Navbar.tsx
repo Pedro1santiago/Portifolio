@@ -6,11 +6,15 @@ interface NavbarProps {
   toggleDarkMode: () => void;
 }
 
+/**
+ * Navbar responsiva com toggle de tema e menu mobile.
+ */
 const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    /** Atualiza o estilo da navbar quando a página é rolada. */
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };

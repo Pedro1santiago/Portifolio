@@ -1,5 +1,8 @@
 import { Github, Linkedin, Mail, Heart, MessageCircle } from "lucide-react";
 
+/**
+ * Rodapé com redes sociais e ano atual.
+ */
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 

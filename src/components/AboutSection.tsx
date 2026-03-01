@@ -1,5 +1,8 @@
 import { Briefcase, GraduationCap, FolderGit2, Award } from "lucide-react";
 
+/**
+ * Seção "Sobre" com resumo, estatísticas e lista de habilidades.
+ */
 const AboutSection = () => {
   const stats = [
     {
@@ -40,6 +43,7 @@ const AboutSection = () => {
     { name: "Git & GitHub" },
     { name: "Kotlin" },
   ];
+
 
   return (
     <section id="sobre" className="py-20 relative">

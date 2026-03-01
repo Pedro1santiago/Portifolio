@@ -1,3 +1,6 @@
+/**
+ * Seção de skills agrupadas por categoria.
+ */
 const SkillsSection = () => {
   const skillCategories = [
     {
